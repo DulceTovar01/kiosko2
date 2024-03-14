@@ -18,6 +18,16 @@
   margin: 0;
     }
 
+    #fondo:before {
+	content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
 
     #logo {
       max-width: 500px;
@@ -69,7 +79,7 @@
     .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Cambiado a fr para usar fracciones del espacio disponible */
-  grid-template-rows: 135px;
+  grid-template-rows: 160px;
   margin: 0;
   box-sizing: border-box; /* Asegura que el ancho incluye padding y borde */
   max-width: 100%; /* Asegura que no exceda el ancho de la ventana */
@@ -233,7 +243,7 @@
 
             <div class="button-container">
               <a href="WinningTemp.html" rel="noopener noreferrer" class="buttonWT">
-                <img id="wt" src="imagenes/WinningTemp.png">
+                <img id="wt" src="imagenes/WT.png">
               </a>
             </div>
           </div>
