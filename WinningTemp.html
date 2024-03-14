@@ -18,6 +18,16 @@
             margin: 0;
         }
 
+        #fondo:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -53,7 +63,7 @@
         iframe {
             width: 100%;
             height: calc(100vh - 110px - 80px);
-            
+
             /* Calcula el 100% de la altura de la ventana gráfica, restando la altura del encabezado y el margen del contenedor */
             border: none;
             /* Elimina el borde del iframe */
@@ -64,7 +74,6 @@
         }
 
         .btnHome {
-
             margin-top: 10px;
             width: 150px;
             height: 70px;
@@ -73,12 +82,15 @@
             font-weight: bold;
             /* Texto en negrita */
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            position: relative;
+            /* Añadido */
+            z-index: 1;
+            /* Añadido */
         }
 
         #home {
@@ -90,16 +102,13 @@
 
             margin-top: 10px;
             overflow: hidden;
-          
-      
-        
+
         }
 
         /* 
         transform: scale(0.8); 
         transform-origin: 50% 0; 
         */
-
     </style>
 
 </head>
@@ -128,7 +137,8 @@
     </div>
 
     <div class="frame">
-        <iframe src="https://checkin.winningtemp.com/titanx-engagement" rel="noopener noreferrer" allowfullscreen scrolling="no" >
+        <iframe src="https://checkin.winningtemp.com/titanx-engagement" rel="noopener noreferrer" allowfullscreen
+            scrolling="no">
         </iframe>
     </div>
 
