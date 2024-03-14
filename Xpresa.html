@@ -6,6 +6,7 @@
     <style>
         #fondo {
             background: url(imagenes/fondo1.jpg);
+
             background-size: cover;
             /* Ajusta el tamaño para cubrir completamente */
             height: 100%;
@@ -13,6 +14,15 @@
             margin: 0;
         }
 
+        #fondo:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
 
         .container {
             display: grid;
@@ -30,7 +40,7 @@
             background: white;
             opacity: 80%;
             color: white;
-          
+
         }
 
         #logo {
@@ -59,8 +69,8 @@
             -ms-zoom: 0.85;
         }
 
+
         .btnHome {
-        
             margin-top: 10px;
             width: 150px;
             height: 70px;
@@ -69,24 +79,28 @@
             font-weight: bold;
             /* Texto en negrita */
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            position: relative;
+            /* Añadido */
+            z-index: 1;
+            /* Añadido */
         }
+
+
 
         #home {
             max-width: 70px;
             height: 70px;
         }
 
-        .frame{
+        .frame {
 
             margin-top: 10px;
         }
-
     </style>
 
 </head>
@@ -98,7 +112,7 @@
         <div class="item">Item 1</div> <!-- cada uno de los ítems del grid -->
         <div class="item">Item 2
             <img id="logo" src="imagenes/logoTitanX.png" alt="Logo TitanX">
-           <!-- <img id="app" src="imagenes/aplicaciones.png" alt="Aplicaciones TitanX"> -->
+            <!-- <img id="app" src="imagenes/aplicaciones.png" alt="Aplicaciones TitanX"> -->
         </div>
         <div class="item">Item 3</div>
 
@@ -106,20 +120,20 @@
     </div>
 
     <div>
-        <a  href="index.html">
-            <button class="btnHome" type="submit"> 
+        <a href="index.html">
+            <button class="btnHome" type="submit">
 
                 <img id="home" src="imagenes/home.png" alt="home TitanX">
 
-            </button> </a><br>
+            </button> </a>
     </div>
 
     <div class="frame">
-    <iframe src="https://apps.powerapps.com/play/e/default-a14e26d5-875e-40a9-a37c-c773f5c9b3b3/a/17e017ac-465f-4912-9aec-062919220323?tenantId=a14e26d5-875e-40a9-a37c-c773f5c9b3b3&hint=c191b9ce-4dc9-4d4d-96cd-5395307f6744&sourcetime=1701873605776&source=portal#
+        <iframe src="https://apps.powerapps.com/play/e/default-a14e26d5-875e-40a9-a37c-c773f5c9b3b3/a/17e017ac-465f-4912-9aec-062919220323?tenantId=a14e26d5-875e-40a9-a37c-c773f5c9b3b3&hint=c191b9ce-4dc9-4d4d-96cd-5395307f6744&sourcetime=1701873605776&source=portal#
         " rel="noopener noreferrer" scrolling="no"> Liga Xpresa, espere un momento </iframe>
     </div>
 
-   
+
 
 </body>
 
